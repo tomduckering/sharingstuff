@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @lendable.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @lendable.description %>
+</p>
+
+<p>
+  <b>Owner:</b>
+  <%= @lendable.owner %>
+</p>
+
+
+<%= link_to 'Edit', edit_lendable_path(@lendable) %> |
+<%= link_to 'Back', lendables_path %>

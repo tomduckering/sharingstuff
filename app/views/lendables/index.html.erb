@@ -1,0 +1,27 @@
+<h1>Listing lendables</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Owner</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @lendables.each do |lendable| %>
+  <tr>
+    <td><%= lendable.name %></td>
+    <td><%= lendable.description %></td>
+    <td><%= lendable.owner %></td>
+    <td><%= link_to 'Show', lendable %></td>
+    <td><%= link_to 'Edit', edit_lendable_path(lendable) %></td>
+    <td><%= link_to 'Destroy', lendable, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Lendable', new_lendable_path %>
